@@ -22,6 +22,11 @@
 3. Run `apt update` repeatedly until you get no errors. (There's some problem with the server's certificates with right now)
 4. Run `apt install john crunch`
 
+
+# Download the challenge files to your container
+1. Open terminal where the files are downloaded.
+2. Run this on the host terminal `docker cp ./<file> kali:/root`
+
 # Resources
 - [Crunch Manpage](https://manpages.ubuntu.com/manpages/oracular/en/man1/crunch.1.html)
 - [Stackoverflow with Crunch usage examples](https://superuser.com/questions/1465287/crunch-d-option-with-simple-aa-charset)
