@@ -18,46 +18,46 @@
 3. Verify by running `docker --version` in the terminal.
 
 ## Kali/ParrotOS Image
-1. `docker run -it --name kali kalilinux/kali-rolling`
+1. `docker run -it --name kali kalilinux/kali-rolling`  
 ![](./res/01_run_container.png)
 2. Now you'll be running commands inside the container.
 3. Run `apt update` repeatedly until you get no errors. (There's some problem with the server's certificates with right now)
-4. Run `apt install john crunch`
+4. Run `apt install john crunch`  
 ![](./res/02_apt_update_install.png)
-5. You can restart where you left if you close your terminal by running `docker start -i kali`
+5. You can restart where you left if you close your terminal by running `docker start -i kali`  
 ![](./res/02a_resume_container.png)
 
 # Download the challenge files to your container
-1. Open terminal where the files are downloaded.
+1. Open terminal where the files are downloaded.  
 ![](./res/03_download.png)
-2. Run this on the host terminal `docker cp ./<file> kali:/root`
+2. Run this on the host terminal `docker cp ./<file> kali:/root`  
 ![](./res/04_docker_copy.png)
-3. File will now be in `/root` directory of the container.
+3. File will now be in `/root` directory of the container.  
 ![](./res/05_containter_file.png)
 
 # Solving a demo challenge
-1. The text for a challenge looks like this:
+1. The text for a challenge looks like this:  
 ![](./res/06_demo_text.png)
 2. Download and copy the file to the container.
-3. Convert the zip to a format `john` can work on using `zip2john`.
-Usage: `zip2john <file>.zip > <file>.hash`.
+3. Convert the zip to a format `john` can work on using `zip2john`.  
+Usage: `zip2john <file>.zip > <file>.hash`.  
 ![](./res/07_zip2john.png)
 4. You'll work on the `.hash` file now.
-5. Create a wordlist based on the challenge text using `crunch`.
-Usage: `crunch <min_chars> <max_chars> -t <pattern> -o <out file>`
+5. Create a wordlist based on the challenge text using `crunch`.  
+Usage: `crunch <min_chars> <max_chars> -t <pattern> -o <out file>`  
 ![](./res/08_crunch_wordlist.png)
-6. Use the wordlist with `john`.
-Usage: `john --wordlist=<wordlist> <hash file>`
+6. Use the wordlist with `john`.  
+Usage: `john --wordlist=<wordlist> <hash file>`  
 ![](./res/09_john_wordlist.png)
-7. If `john` succeeds in cracking, you'll see the message.
+7. If `john` succeeds in cracking, you'll see the message.  
 Else, create and try another wordlist.
-8. When `john` finds the password, see it using `john --show <hash file>`
+8. When `john` finds the password, see it using `john --show <hash file>`  
 ![](./res/10_john_show.png)
-9. Unzip and read the file using the password.
-To do it in the terminal you can use `unzip <zip file>`. 
-(May need to install `unzip`)
+9. Unzip and read the file using the password.  
+To do it in the terminal you can use `unzip <zip file>`.  
+(May need to install `unzip`)  
 ![](./res/11_unzip_demo.png)
-10. Submit the flag.
+10. Submit the flag.  
 ![](./res/12_submit_flag.png)
 ## NOTES
 11. There may be cases where `crunch` will generate very big (multi GB) wordlists.  
