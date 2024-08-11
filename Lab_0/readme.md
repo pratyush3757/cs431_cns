@@ -19,14 +19,20 @@
 
 ## Kali/ParrotOS Image
 1. `docker run -it --name kali kalilinux/kali-rolling`
+![](./res/01_run_container.png)
 2. Now you'll be running commands inside the container.
 3. Run `apt update` repeatedly until you get no errors. (There's some problem with the server's certificates with right now)
 4. Run `apt install john crunch`
+![](./res/02_apt_update_install.png)
 5. You can restart where you left if you close your terminal by running `docker start -i kali`
 
 # Download the challenge files to your container
 1. Open terminal where the files are downloaded.
+![](./res/03_download.png)
 2. Run this on the host terminal `docker cp ./<file> kali:/root`
+![](./res/04_docker_copy.png)
+3. File will now be in `/root` directory of the container.
+![](./res/05_containter_file.png)
 
 # Resources
 - [Crunch Manpage](https://manpages.ubuntu.com/manpages/oracular/en/man1/crunch.1.html)
