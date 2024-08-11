@@ -25,6 +25,7 @@
 4. Run `apt install john crunch`
 ![](./res/02_apt_update_install.png)
 5. You can restart where you left if you close your terminal by running `docker start -i kali`
+![](./res/02a_resume_container.png)
 
 # Download the challenge files to your container
 1. Open terminal where the files are downloaded.
