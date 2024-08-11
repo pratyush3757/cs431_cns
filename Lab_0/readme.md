@@ -49,9 +49,9 @@ Usage: `crunch <min_chars> <max_chars> -t <pattern> -o <out file>`
 6. Use the wordlist with `john`.  
 Usage: `john --wordlist=<wordlist> <hash file>`  
 ![](./res/09_john_wordlist.png)
-7. If `john` succeeds in cracking, you'll see the message.  
+7. If `john` succeeds in cracking, you'll see the message in the previous output.  
 Else, create and try another wordlist.
-8. When `john` finds the password, see it using `john --show <hash file>`  
+8. See all the passwords for a hash file using `john --show <hash file>`  
 ![](./res/10_john_show.png)
 9. Unzip and read the file using the password.  
 To do it in the terminal you can use `unzip <zip file>`.  
