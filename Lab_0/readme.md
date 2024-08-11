@@ -40,7 +40,7 @@
 ![](./res/06_demo_text.png)
 2. Download and copy the file to the container.
 3. Convert the zip to a format `john` can work on using `zip2john`.  
-Usage: `zip2john <file>.zip > <file>.hash`.  
+Usage: `zip2john <file>.zip > <file>.hash`  
 ![](./res/07_zip2john.png)
 4. You'll work on the `.hash` file now.
 5. Create a wordlist based on the challenge text using `crunch`.  
