@@ -26,3 +26,5 @@
 ![](./res/02_apt_update_install.png)
 5. You can restart where you left if you close your terminal by running `docker start -i kali`  
 ![](./res/02a_resume_container.png)
+
+Alternatively, if Kali is not working, you can use `docker run -it --name parrot parrotsec/security`, and `docker start -i parrot`.
